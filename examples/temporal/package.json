@@ -1,0 +1,15 @@
+{
+  "name": "jalalits-example-temporal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@jalalits/temporal": "workspace:*",
+    "@js-temporal/polyfill": "^0.5.1",
+    "jalalits": "workspace:*"
+  }
+}

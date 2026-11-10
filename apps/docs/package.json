@@ -1,0 +1,12 @@
+{
+  "name": "jalalits-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vitepress build site",
+    "dev": "vitepress dev site"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

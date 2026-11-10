@@ -1,0 +1,14 @@
+{
+  "name": "jalalits-example-react",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@jalalits/react": "workspace:*",
+    "jalalits": "workspace:*",
+    "react": "^19.0.0"
+  }
+}
