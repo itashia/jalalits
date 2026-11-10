@@ -1,0 +1,21 @@
+name: Bug report
+description: Report incorrect calendar or date-time behavior
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package and version
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and expected behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Runtime and timezone
+    validations:
+      required: true

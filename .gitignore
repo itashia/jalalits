@@ -1,20 +1,9 @@
-# Build output
+node_modules/
 dist/
 coverage/
-
-# Dependencies
-node_modules/
-
-# Environment files
-.env
-.env.*
+.turbo/
+.next/
+.env*
 !.env.example
-
-# Logs
-*.log
-npm-debug.log*
-
-# Editor and OS files
+*.tsbuildinfo
 .DS_Store
-.vscode/
-.idea/
