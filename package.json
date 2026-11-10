@@ -1,18 +1,65 @@
 {
-  "name": "jalalits",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "jalalits-monorepo",
+  "version": "0.1.0",
+  "description": "A modern, powerful, zero-dependency Persian (Jalali) date and time library built with TypeScript.",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.22.0",
+  "engines": {
+    "node": ">=22"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "eslint packages examples --ext .ts,.tsx",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "validate:packages": "node scripts/validate-packages.mjs",
+    "bench": "node benchmarks/run.mjs",
+    "smoke:packages": "node scripts/package-smoke.mjs",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm build && pnpm validate:packages",
+    "changeset": "changeset"
+  },
   "devDependencies": {
-    "tsdown": "^0.23.7",
-    "typescript": "^7.0.2",
-    "vitest": "^5.1.0"
+    "@changesets/cli": "^2.29.7",
+    "@eslint/js": "^9.39.1",
+    "@js-temporal/polyfill": "^0.5.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "dayjs": "^1.11.23",
+    "eslint": "^9.39.1",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "fast-check": "^4.10.2",
+    "globals": "^16.5.0",
+    "jalaali-js": "^2.0.1",
+    "jalaliday": "^3.1.1",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.6.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "turbo": "^2.6.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vitest": "^3.2.4",
+    "vue": "^3.5.45",
+    "zod": "^4.6.7"
+  },
+  "pnpm": {
+    "overrides": {
+      "postcss": "^8.5.23"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itashia/jalalits.git"
+  },
+  "homepage": "https://github.com/itashia/jalalits#readme",
+  "bugs": {
+    "url": "https://github.com/itashia/jalalits/issues"
   }
 }

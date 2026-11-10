@@ -1,0 +1,58 @@
+{
+  "name": "@jalalits/react",
+  "version": "0.1.0",
+  "description": "Headless React hooks for JalaliTS",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsdown src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "test": "vitest run --environment jsdom",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "jalalits": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "react": "^19.0.0",
+    "tsdown": "^0.23.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itashia/jalalits.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/itashia/jalalits#readme",
+  "bugs": {
+    "url": "https://github.com/itashia/jalalits/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "jalali",
+    "persian-calendar",
+    "date",
+    "typescript"
+  ]
+}

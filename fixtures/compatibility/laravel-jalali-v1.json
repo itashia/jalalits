@@ -1,0 +1,71 @@
+{
+  "source": {
+    "repository": "https://github.com/itashia/laravel-jalali",
+    "branch": "main",
+    "inspected": "2026-11-10",
+    "model": "Borkowski break-year calendar",
+    "note": "Anchors and contracts copied from the inspected reference tests and API documentation. This fixture is not a claim of complete PHP compatibility."
+  },
+  "conversions": [
+    {
+      "jalali": { "year": 1395, "month": 1, "day": 1 },
+      "gregorian": { "year": 2016, "month": 3, "day": 20 }
+    },
+    {
+      "jalali": { "year": 1403, "month": 1, "day": 1 },
+      "gregorian": { "year": 2024, "month": 3, "day": 20 }
+    },
+    {
+      "jalali": { "year": 1404, "month": 1, "day": 1 },
+      "gregorian": { "year": 2025, "month": 3, "day": 21 }
+    },
+    {
+      "jalali": { "year": 1405, "month": 8, "day": 19 },
+      "gregorian": { "year": 2026, "month": 11, "day": 10 }
+    }
+  ],
+  "leapYears": [
+    { "year": 1403, "leap": true },
+    { "year": 1404, "leap": false },
+    { "year": 1405, "leap": false }
+  ],
+  "monthLengths": [
+    { "year": 1403, "month": 12, "days": 30 },
+    { "year": 1404, "month": 12, "days": 29 }
+  ],
+  "arithmetic": [
+    {
+      "date": { "year": 1404, "month": 6, "day": 31 },
+      "unit": "months",
+      "amount": 6,
+      "expected": "1404/12/29"
+    },
+    {
+      "date": { "year": 1404, "month": 6, "day": 31 },
+      "unit": "days",
+      "amount": 1,
+      "expected": "1404/07/01"
+    }
+  ],
+  "formatting": [
+    { "date": "1405/08/19", "format": "F l", "expected": "آبان سه‌شنبه" },
+    { "date": "1405/08/19", "format": "z t L", "expected": "234 30 0" }
+  ],
+  "parsing": [
+    { "input": "۱۴۰۵/۰۸/۱۹", "expected": "1405/08/19" },
+    { "input": "١٤٠٥/٠٨/١٩", "expected": "1405/08/19" }
+  ],
+  "weeks": [{ "date": "1405/08/19", "start": "1405/08/16", "weekday": 3 }],
+  "timezone": [
+    {
+      "instant": "2024-03-09T17:00:00.000Z",
+      "timeZone": "America/New_York",
+      "calendarDayElapsedSeconds": 82800,
+      "elapsed24HoursSeconds": 86400
+    }
+  ],
+  "comparisons": [
+    { "instant": "2026-11-10T12:00:00.000Z", "timeZones": ["UTC", "Asia/Tehran"], "comparison": 0 }
+  ],
+  "invalidDates": ["1404/12/30", "1405/8/19", "1405-08-19"]
+}

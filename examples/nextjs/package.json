@@ -1,0 +1,17 @@
+{
+  "name": "jalalits-example-nextjs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@jalalits/react": "workspace:*",
+    "jalalits": "workspace:*",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
